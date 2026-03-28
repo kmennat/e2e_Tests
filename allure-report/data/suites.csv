@@ -1,0 +1,6 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","11315","test1","firefox","2025-10-17","passed","2025-10-17","","firstScript.spec.ts","",""
+"","2","test2","firefox","2025-10-17","skipped","2025-10-17","","firstScript.spec.ts","",""
+"","8937","valid login","firefox","2025-10-18","passed","2025-10-18","Login test","hooks.spec.ts","",""
+"","2","testing","firefox","2025-10-17","skipped","2025-10-17","","firstScript.spec.ts","",""
+"","6645","invalid login","firefox","2025-10-18","passed","2025-10-18","Login test","hooks.spec.ts","",""
