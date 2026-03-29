@@ -19,7 +19,7 @@ test.describe('User API Test', () => {
         //expect(jsonResponse.length()).toBe(100);
     });
     //----------------------GET with params 200-------
-    test.only('Check get users for a specific user', async ({request}) => {
+    test('Check get users for a specific user', async ({request}) => {
         //response = await usersRequest.getUsers(request)
         response = await request.get('https://jsonplaceholder.typicode.com/posts',{
             params: userParam
