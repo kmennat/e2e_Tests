@@ -2,7 +2,6 @@ import { test, expect } from '@playwright/test';
 test('test1',async({page})=>{
     //1 - goto
     await page.goto('https://practice.expandtesting.com');
-    await page.pause()
     await page.goto('https://practice.expandtesting.com/login');
     //2 - reload
     await page.reload()
