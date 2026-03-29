@@ -71,13 +71,13 @@ export default defineConfig({
       },
     },
 
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] , 
-         video: 'on',
-         screenshot: 'on',
-      },
-    },
+    // {
+    //   name: 'firefox',
+    //   use: { ...devices['Desktop Firefox'] , 
+    //      video: 'on',
+    //      screenshot: 'on',
+    //   },
+    // },
 
     // {
     //   name: 'webkit',
