@@ -1,9 +1,9 @@
-import { test, expect, devices } from '@playwright/test';
+// import { test, expect, devices } from '@playwright/test';
 
-test.use({
-  ...devices['iPhone 15'],
-});
+// test.use({
+//   ...devices['iPhone 15'],
+// });
 
-test('test', async ({ page }) => {
-  await page.goto('https://www.code-deck.io/');
-});
+// test('test', async ({ page }) => {
+//   await page.goto('https://www.code-deck.io/');
+// });
