@@ -18,11 +18,11 @@ pipeline {
             }
         }
 
-        stage('Install Playwright Browsers') {
-            steps {
-                sh 'npx playwright install --with-deps'
-            }
-        }
+        // stage('Install Playwright Browsers') {
+        //     steps {
+        //         sh 'npx playwright install --with-deps'
+        //     }
+        // }
 
         stage('Run Playwright Tests') {
             steps {
@@ -30,11 +30,11 @@ pipeline {
             }
         }
 
-        stage('Archive Report') {
-            steps {
-                archiveArtifacts artifacts: 'playwright-report/**', allowEmptyArchive: true
-            }
-        }
+        // stage('Archive Report') {
+        //     steps {
+        //         archiveArtifacts artifacts: 'playwright-report/**', allowEmptyArchive: true
+        //     }
+        // }
     }
 
     post {
