@@ -19,19 +19,19 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-               sh 'npm ci --prefer-offline'
+               bat 'npm ci --prefer-offline'
             }
         }
 
         stage('Install Playwright Browsers') {
             steps {
-                sh 'npx playwright install --with-deps'
+                bat 'npx playwright install --with-deps'
             }
         }
 
         stage('Run Playwright Tests') {
             steps {
-                sh 'npx playwright test --workers=2'
+                bat 'npx playwright test --workers=2'
             }
         }
 
