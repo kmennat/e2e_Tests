@@ -45,18 +45,14 @@ pipeline {
     post {
         always {
             echo 'Pipeline finished.'
-        }
-        failure {
-            echo 'Tests failed!'
-        }
-    }
-    post {
-        always {
-            publishHTML([
+             publishHTML([
                 reportDir: 'playwright-report',
                 reportFiles: 'index.html',
                 reportName: 'Playwright Report'
             ])
+        }
+        failure {
+            echo 'Tests failed!'
         }
     }
 }
