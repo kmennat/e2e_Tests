@@ -58,4 +58,5 @@ pipeline {
                 reportName: 'Playwright Report'
             ])
         }
+    }
 }
