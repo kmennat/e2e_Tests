@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    parameters {
+        string(name: 'ENV', defaultValue: 'dev', description: 'Umgebung')
+        booleanParam(name: 'HEADLESS', defaultValue: true, description: 'Headless Mode')
+    }
+
     tools {
         nodejs 'NodeJS_25' // Name aus Jenkins-Konfiguration
     }
