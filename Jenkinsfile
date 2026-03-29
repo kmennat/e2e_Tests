@@ -3,7 +3,7 @@ pipeline {
 
     parameters {
         string(name: 'ENV', defaultValue: 'dev', description: 'Umgebung')
-        booleanParam(name: 'HEADLESS', defaultValue: true, description: 'Headless Mode')
+        // booleanParam(name: 'HEADLESS', defaultValue: true, description: 'Headless Mode')
     }
 
     tools {
@@ -23,11 +23,11 @@ pipeline {
             }
         }
 
-        stage('Install Playwright Browsers') {
-            steps {
-                bat 'npx playwright install --with-deps'
-            }
-        }
+        // stage('Install Playwright Browsers') {
+        //     steps {
+        //         bat 'npx playwright install --with-deps'
+        //     }
+        // }
 
         stage('Run Playwright Tests') {
             steps {
