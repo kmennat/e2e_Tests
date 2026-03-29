@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'playwright' }
 
     parameters {
         string(name: 'ENV', defaultValue: 'dev', description: 'Umgebung')
@@ -19,15 +19,15 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                sh 'npm ci'
+               sh 'npm ci --prefer-offline'
             }
         }
 
-        // stage('Install Playwright Browsers') {
-        //     steps {
-        //         sh 'npx playwright install --with-deps'
-        //     }
-        // }
+        stage('Install Playwright Browsers') {
+            steps {
+                sh 'npx playwright install --with-deps'
+            }
+        }
 
         stage('Run Playwright Tests') {
             steps {
