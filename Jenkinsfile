@@ -44,17 +44,12 @@ pipeline {
 
     post {
         always {
-            // echo 'Pipeline finished.'
-            //  publishHTML([
-            //     reportDir: 'playwright-report',
-            //     reportFiles: 'index.html',
-            //     reportName: 'Playwright Report'
-            // ])
-            // ZIP erstellen
-            bat 'zip -r playwright-report.zip playwright-report || true'
-
-            // ZIP als Artefakt speichern
-            archiveArtifacts artifacts: 'playwright-report.zip', fingerprint: true
+            echo 'Pipeline finished.'
+             publishHTML([
+                reportDir: 'playwright-report',
+                reportFiles: 'index.html',
+                reportName: 'Playwright Report'
+            ])           
         }
         failure {
             echo 'Tests failed!'
