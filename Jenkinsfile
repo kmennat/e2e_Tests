@@ -35,11 +35,11 @@ pipeline {
             }
         }
 
-        // stage('Archive Report') {
-        //     steps {
-        //         archiveArtifacts artifacts: 'playwright-report/**', allowEmptyArchive: true
-        //     }
-        // }
+        stage('Archive Report') {
+            steps {
+                archiveArtifacts artifacts: 'playwright-report/**', allowEmptyArchive: true
+            }
+        }
     }
 
     post {
