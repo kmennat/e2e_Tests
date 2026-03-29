@@ -51,7 +51,7 @@ pipeline {
             //     reportName: 'Playwright Report'
             // ])
             // ZIP erstellen
-            sh 'zip -r playwright-report.zip playwright-report || true'
+            bat 'zip -r playwright-report.zip playwright-report || true'
 
             // ZIP als Artefakt speichern
             archiveArtifacts artifacts: 'playwright-report.zip', fingerprint: true
