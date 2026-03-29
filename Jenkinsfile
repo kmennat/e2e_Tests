@@ -23,11 +23,11 @@ pipeline {
             }
         }
 
-        // stage('Install Playwright Browsers') {
-        //     steps {
-        //         bat 'npx playwright install --with-deps'
-        //     }
-        // }
+        stage('Install Playwright Browsers') {
+            steps {
+                bat 'npx playwright install --with-deps'
+            }
+        }
 
         stage('Run Playwright Tests') {
             steps {
